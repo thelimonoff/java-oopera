@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Show {
-    private String title;
-    private int duration;
+    private final String title;
+    private final int duration;
     private Director director;
 
     ArrayList<Actor> listOfActors;
@@ -51,13 +51,11 @@ public class Show {
                 + newActor.toString() + ".");
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void showInfo() {
         System.out.println();
         System.out.println("------ «" + title + "» ------");
+        System.out.println("Длительность: " + duration + " мин.");
+        System.out.println("Режиссёр: " + director.toString());
         System.out.println("Список актёров:");
         this.showListOfActors();
     }
